@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url("images/vlad-tchompalov-qqwC1K7od0E-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0; /* Remove default body margin */
+}
+.header {
+  display: flex; 
+  align-items: center; 
+  padding: 20px; 
+}
+
+.header img {
+  height: 80px; 
+  margin-right: 20px; /* Space between images */
+}
+
+.timeStyle {
+  font-size: 80px; 
+  color: #E82127;
+  margin-left: auto; /* Push the time to the right */
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 20px; /* Add horizontal padding to the container */
+}
+
+.tile {
+  width: 23%; 
+  margin-bottom: 2%; 
+  border-radius: 10px; 
+  background-color: rgba(80, 78, 78, 0.5); 
+  overflow: hidden; 
+  aspect-ratio: 1 / 1; 
+  padding: 10px; 
+}
+
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block; 
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="images/Tesla_Motors.svg" alt="Tesla">
+  <img src="images/nexusteslared.png" alt="Nexus Tesla Red">
+  <b class="timeStyle"><span class="time"></span></b>
+</div>
+
+<div class="container">
+    <div class="tile">
+        <a href="https://www.youtube.com/redirect?q=https://plex.tv"> <img src="images/plex.png" alt="Plex"> </a>
+      </div>
+      <div class="tile">
+        <a href="https://www.youtube.com/redirect?q=https://www.netflix.com/browse"> <img src="images/netflix.svg" alt="Netflix"> </a>
+      </div>
+      <div class="tile">
+        <a href="https://www.youtube.com/redirect?q=https://www.disneyplus.com"> <img src="images/disney-plus.svg" alt="Disney+"> </a>
+      </div>
+      <div class="tile">
+        <a href="https://www.youtube.com/redirect?q=https://www.primevideo.com/"> <img src="images/prime-video.svg" alt="Prime Video"> </a>
+      </div>
+      <div class="tile">
+        <a href="https://www.youtube.com/redirect?q=https://app.emby.media/"> <img src="images/emby.png" alt="Emby"> </a>
+      </div>
+      <div class="tile">
+        <a href="https://www.youtube.com/redirect?q=https://www.skyshowtime.com/watch/home"> <img src="images/SkyShowtime_Logo.svg" alt="SkyShowtime"> </a>
+      </div>
+      <div class="tile">
+        <a href="https://www.youtube.com/redirect?q=https://www.hbomax.com"> <img src="images/HBO_Max_Logo.svg" alt="HBO Max"> </a>
+      </div>
+      <div class="tile">
+        <a href="https://www.youtube.com/redirect?q=https://nebula.tv"> <img src="images/nebula.png" alt="Nebula"> </a>
+      </div>
+</div>
+<script>
+    function updateTime() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', hour12: false}); 
+      document.querySelector('.time').textContent = timeString;
+    }
+    
+    updateTime(); 
+    setInterval(updateTime, 1000); 
+    </script>
+</body>
+</html>
